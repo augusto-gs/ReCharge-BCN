@@ -5,5 +5,8 @@ declare module "styled-components" {
     typography: {
       main: string;
     };
+    colors: {
+      light: string;
+    };
   }
 }
