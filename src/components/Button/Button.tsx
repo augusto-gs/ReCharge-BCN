@@ -12,7 +12,7 @@ const Button = ({
   isDisabled,
   modifier,
   type,
-}: ButtonProps) => {
+}: ButtonProps) => (
   <button
     className={`button ${modifier}`}
     onClick={actionOnClick}
@@ -20,7 +20,7 @@ const Button = ({
     type={type}
   >
     {text}
-  </button>;
-};
+  </button>
+);
 
 export default Button;
