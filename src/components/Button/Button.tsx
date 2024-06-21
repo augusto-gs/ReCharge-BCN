@@ -1,3 +1,5 @@
+import ButtonStyled from "./ButtonStyled";
+
 interface ButtonProps {
   actionOnClick: () => void;
   type: "submit" | "button";
@@ -13,14 +15,14 @@ const Button = ({
   modifier,
   type,
 }: ButtonProps) => (
-  <button
+  <ButtonStyled
     className={`button ${modifier}`}
     onClick={actionOnClick}
     disabled={isDisabled}
     type={type}
   >
     {text}
-  </button>
+  </ButtonStyled>
 );
 
 export default Button;
