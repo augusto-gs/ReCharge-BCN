@@ -1,10 +1,13 @@
 import Header from "../Header/Header";
+import Hero from "../Hero/Hero";
+import ContainerStyled from "../../../styles/shared/ContainerStyled";
 
 const App = (): React.ReactElement => {
   return (
-    <main>
+    <ContainerStyled className="main-container">
       <Header />
-    </main>
+      <Hero />
+    </ContainerStyled>
   );
 };
 
