@@ -7,7 +7,7 @@ describe("Given an App component", () => {
     test("Then you should see a title 'Find your motorbike' on a heading", () => {
       const titleText = "Find your motorbike";
 
-      customRender(<App />);
+      customRender(<App />, true);
 
       const title = screen.getByRole("heading", { name: titleText });
 
