@@ -1,13 +1,35 @@
 import ChargingLocationStructure from "../types";
 
+const networkName = "Endolla Barcelona";
+const cityNetwork = "Barcelona de Serveis Municipals S.A.";
+const hostName = "B:SM Barcelona de Serveis Municipals";
+const website = "www.endolla.barcelona";
+const cityName = "Barcelona";
+const phoneNumber = "937 064 866";
+const cityInitials = "BCN";
+const countryCode = "ES";
+const languageCode = "CA";
+const startHour = "00:00";
+const endHour = "24:00";
+const publicStatus = "PUBLIC";
+const hostAddress = "Carrer de Calàbria, 66";
+const hostPostalCode = "08015";
+const wallConnector = "WALL_OUTLET";
+const socketChargingMechanism = "SOCKET";
+const inUseStatus = "IN_USE";
+const availableStatus = "AVAILABLE";
+const authenticationIdA1 = "A1";
+const motorcycleRestrictionString = "MOTORCYCLE_ONLY";
+const standardKillowatts = 3.6;
+
 const locations: ChargingLocationStructure[] = [
   {
     id: "3715",
-    network_brand_name: "Endolla Barcelona",
-    network_name: "Barcelona de Serveis Municipals S.A.",
+    network_brand_name: networkName,
+    network_name: cityNetwork,
     contact: {
-      operator_phone: "937 064 866",
-      operator_website: "www.endolla.barcelona",
+      operator_phone: phoneNumber,
+      operator_website: website,
     },
     coordinates: {
       latitude: 41.372802,
@@ -15,33 +37,33 @@ const locations: ChargingLocationStructure[] = [
     },
     address: {
       address_string: "Av. Reina Maria Cristina, 16",
-      locality: "Barcelona",
-      admin_area: "BCN",
+      locality: cityName,
+      admin_area: cityInitials,
       postal_code: "08004",
-      country_code: "ES",
-      language_code: "CA",
+      country_code: countryCode,
+      language_code: languageCode,
     },
     opening_hours: [
       {
         weekday_begin: 1,
         weekday_end: 7,
-        hour_begin: "00:00",
-        hour_end: "24:00",
+        hour_begin: startHour,
+        hour_end: endHour,
       },
     ],
-    access_restriction: "PUBLIC",
+    access_restriction: publicStatus,
     host: {
-      name: "B:SM Barcelona de Serveis Municipals",
+      name: hostName,
       address: {
-        address_string: "Carrer de Calàbria, 66",
-        locality: "Barcelona",
-        postal_code: "08015",
-        country_code: "ES",
-        language_code: "CA",
+        address_string: hostAddress,
+        locality: cityName,
+        postal_code: hostPostalCode,
+        country_code: countryCode,
+        language_code: languageCode,
       },
       contact: {
-        operator_phone: "937 064 866",
-        operator_website: "www.endolla.barcelona",
+        operator_phone: phoneNumber,
+        operator_website: website,
       },
     },
     stations: [
@@ -55,18 +77,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "IN_USE",
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-20T22:24:14+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -75,18 +97,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "IN_USE",
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-20T22:24:14+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -95,18 +117,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T06:21:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -115,18 +137,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T06:21:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -135,18 +157,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "3",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-18T17:31:41+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -155,18 +177,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "3",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-18T17:31:41+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -175,802 +197,802 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "4",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:38:24+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "4",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:38:24+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "5",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:39:00+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "5",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:39:00+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "6",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:40:28+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "6",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:40:28+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "7",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:41:40+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "7",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:41:40+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "8",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "IN_USE",
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-21T14:32:28+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "8",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "IN_USE",
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-21T14:32:28+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "9",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:36:45+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "9",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:36:45+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "10",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:35:37+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "10",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:35:37+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "11",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:34:30+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "11",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:34:30+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "12",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:33:20+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "12",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:33:20+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "13",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:30:46+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "13",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:30:46+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "14",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:19:02+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "14",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:19:02+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "15",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:26:42+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "15",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:26:42+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "16",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:27:53+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "16",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:27:53+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "17",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-18T12:07:23+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "17",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-18T12:07:23+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "18",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:29:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "18",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:29:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "19",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T05:13:28+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "19",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T05:13:28+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "20",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:44:17+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "20",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:44:17+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "21",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:21:35+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "21",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:21:35+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "22",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:23:02+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "22",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:23:02+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "23",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:23:54+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "23",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T13:23:54+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -986,18 +1008,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-02T22:37:44+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1017,18 +1039,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-04-30T19:56:59+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1048,18 +1070,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-16T13:30:15+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1079,18 +1101,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T16:26:32+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1110,18 +1132,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-19T08:01:13+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1141,18 +1163,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-17T02:03:31+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1172,18 +1194,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "IN_USE",
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-20T00:20:45+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1203,18 +1225,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-05-26T16:53:31+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1234,18 +1256,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T01:07:52+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1265,18 +1287,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-13T22:01:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1296,18 +1318,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T00:54:00+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1327,18 +1349,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-05-12T12:48:53+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1358,18 +1380,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-05-24T17:38:44+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1389,18 +1411,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-19T13:38:56+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1420,18 +1442,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-11T19:47:03+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1451,18 +1473,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T06:02:59+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1482,18 +1504,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T01:02:34+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1513,18 +1535,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T20:03:10+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1544,18 +1566,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T21:12:01+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1575,18 +1597,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-19T16:36:55+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1606,18 +1628,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T06:08:19+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1629,16 +1651,16 @@ const locations: ChargingLocationStructure[] = [
       },
     ],
     onstreet_location: false,
-    language_code: "CA",
+    language_code: languageCode,
     last_updated: "2023-07-11T09:15:08+02:00",
   },
   {
     id: "3717",
-    network_brand_name: "Endolla Barcelona",
-    network_name: "Barcelona de Serveis Municipals S.A.",
+    network_brand_name: networkName,
+    network_name: cityNetwork,
     contact: {
-      operator_phone: "937 064 866",
-      operator_website: "www.endolla.barcelona",
+      operator_phone: phoneNumber,
+      operator_website: website,
     },
     coordinates: {
       latitude: 41.40645,
@@ -1646,33 +1668,33 @@ const locations: ChargingLocationStructure[] = [
     },
     address: {
       address_string: "C/Torrent de l´Olla, 221",
-      locality: "Barcelona",
-      admin_area: "BCN",
+      locality: cityName,
+      admin_area: cityInitials,
       postal_code: "08012",
-      country_code: "ES",
-      language_code: "CA",
+      country_code: countryCode,
+      language_code: languageCode,
     },
     opening_hours: [
       {
         weekday_begin: 1,
         weekday_end: 7,
-        hour_begin: "00:00",
-        hour_end: "24:00",
+        hour_begin: startHour,
+        hour_end: endHour,
       },
     ],
-    access_restriction: "PUBLIC",
+    access_restriction: publicStatus,
     host: {
-      name: "B:SM Barcelona de Serveis Municipals",
+      name: hostName,
       address: {
-        address_string: "Carrer de Calàbria, 66",
-        locality: "Barcelona",
-        postal_code: "08015",
-        country_code: "ES",
-        language_code: "CA",
+        address_string: hostAddress,
+        locality: cityName,
+        postal_code: hostPostalCode,
+        country_code: countryCode,
+        language_code: languageCode,
       },
       contact: {
-        operator_phone: "937 064 866",
-        operator_website: "www.endolla.barcelona",
+        operator_phone: phoneNumber,
+        operator_website: website,
       },
     },
     stations: [
@@ -1686,18 +1708,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "IN_USE",
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-21T16:02:44+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1706,18 +1728,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "IN_USE",
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-21T16:02:44+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1726,18 +1748,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T21:08:04+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1746,18 +1768,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T21:08:04+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1766,18 +1788,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "3",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-19T19:35:36+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1786,18 +1808,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "3",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-19T19:35:36+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1806,18 +1828,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "4",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T06:39:00+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1826,18 +1848,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "4",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T06:39:00+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1846,82 +1868,82 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "6",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T07:55:56+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "6",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T07:55:56+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "7",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-10T09:19:36+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "7",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-10T09:19:36+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -1937,18 +1959,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T09:39:48+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1968,18 +1990,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T13:14:53+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -1999,18 +2021,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T05:49:01+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2030,18 +2052,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T22:02:40+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2061,18 +2083,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-18T08:59:39+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2092,18 +2114,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T15:50:52+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2123,18 +2145,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T05:48:55+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2154,18 +2176,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-12T08:33:24+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2185,18 +2207,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T12:08:45+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2216,18 +2238,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T21:50:37+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2247,18 +2269,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-19T15:22:17+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2278,42 +2300,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T05:58:39+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T05:58:39+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -2329,42 +2351,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-05-24T09:19:55+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-05-24T09:19:55+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -2380,42 +2402,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T05:49:00+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T05:49:00+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -2423,16 +2445,16 @@ const locations: ChargingLocationStructure[] = [
       },
     ],
     onstreet_location: false,
-    language_code: "CA",
+    language_code: languageCode,
     last_updated: "2023-07-06T11:00:09+02:00",
   },
   {
     id: "3718",
-    network_brand_name: "Endolla Barcelona",
-    network_name: "Barcelona de Serveis Municipals S.A.",
+    network_brand_name: networkName,
+    network_name: cityNetwork,
     contact: {
-      operator_phone: "937 064 866",
-      operator_website: "www.endolla.barcelona",
+      operator_phone: phoneNumber,
+      operator_website: website,
     },
     coordinates: {
       latitude: 41.37643,
@@ -2440,33 +2462,33 @@ const locations: ChargingLocationStructure[] = [
     },
     address: {
       address_string: "Pg. de Colom, 1",
-      locality: "Barcelona",
-      admin_area: "BCN",
+      locality: cityName,
+      admin_area: cityInitials,
       postal_code: "08002",
-      country_code: "ES",
-      language_code: "CA",
+      country_code: countryCode,
+      language_code: languageCode,
     },
     opening_hours: [
       {
         weekday_begin: 1,
         weekday_end: 7,
-        hour_begin: "00:00",
-        hour_end: "24:00",
+        hour_begin: startHour,
+        hour_end: endHour,
       },
     ],
-    access_restriction: "PUBLIC",
+    access_restriction: publicStatus,
     host: {
-      name: "B:SM Barcelona de Serveis Municipals",
+      name: hostName,
       address: {
-        address_string: "Carrer de Calàbria, 66",
-        locality: "Barcelona",
-        postal_code: "08015",
-        country_code: "ES",
-        language_code: "CA",
+        address_string: hostAddress,
+        locality: cityName,
+        postal_code: hostPostalCode,
+        country_code: countryCode,
+        language_code: languageCode,
       },
       contact: {
-        operator_phone: "937 064 866",
-        operator_website: "www.endolla.barcelona",
+        operator_phone: phoneNumber,
+        operator_website: website,
       },
     },
     stations: [
@@ -2480,18 +2502,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T22:22:34+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2500,18 +2522,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T22:22:34+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2520,18 +2542,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T19:06:53+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2540,18 +2562,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T19:06:53+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2560,18 +2582,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "3",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T16:50:29+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2580,18 +2602,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "3",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T16:50:29+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2600,18 +2622,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "4",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T16:40:55+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2620,18 +2642,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "4",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T16:40:55+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2640,18 +2662,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "5",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T14:41:13+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2660,18 +2682,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "6",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-18T13:32:41+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2680,18 +2702,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "7",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T21:57:28+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2700,18 +2722,18 @@ const locations: ChargingLocationStructure[] = [
           },
           {
             id: "8",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T21:56:27+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2731,82 +2753,82 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T14:59:56+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-15T14:59:56+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-16T23:43:56+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-16T23:43:56+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -2822,18 +2844,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T19:04:36+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2853,18 +2875,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T18:03:52+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2884,18 +2906,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T10:36:51+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2915,18 +2937,18 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-19T18:12:31+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
@@ -2938,16 +2960,16 @@ const locations: ChargingLocationStructure[] = [
       },
     ],
     onstreet_location: false,
-    language_code: "CA",
+    language_code: languageCode,
     last_updated: "2023-07-20T12:25:23+02:00",
   },
   {
     id: "3719",
-    network_brand_name: "Endolla Barcelona",
-    network_name: "Barcelona de Serveis Municipals S.A.",
+    network_brand_name: networkName,
+    network_name: cityNetwork,
     contact: {
-      operator_phone: "937 064 866",
-      operator_website: "www.endolla.barcelona",
+      operator_phone: phoneNumber,
+      operator_website: website,
     },
     coordinates: {
       latitude: 41.403247,
@@ -2955,33 +2977,33 @@ const locations: ChargingLocationStructure[] = [
     },
     address: {
       address_string: "c/ Gran de Gràcia 190",
-      locality: "Barcelona",
-      admin_area: "BCN",
+      locality: cityName,
+      admin_area: cityInitials,
       postal_code: "08012",
-      country_code: "ES",
-      language_code: "CA",
+      country_code: countryCode,
+      language_code: languageCode,
     },
     opening_hours: [
       {
         weekday_begin: 1,
         weekday_end: 7,
-        hour_begin: "00:00",
-        hour_end: "24:00",
+        hour_begin: startHour,
+        hour_end: endHour,
       },
     ],
-    access_restriction: "PUBLIC",
+    access_restriction: publicStatus,
     host: {
-      name: "B:SM Barcelona de Serveis Municipals",
+      name: hostName,
       address: {
-        address_string: "Carrer de Calàbria, 66",
-        locality: "Barcelona",
-        postal_code: "08015",
-        country_code: "ES",
-        language_code: "CA",
+        address_string: hostAddress,
+        locality: cityName,
+        postal_code: hostPostalCode,
+        country_code: countryCode,
+        language_code: languageCode,
       },
       contact: {
-        operator_phone: "937 064 866",
-        operator_website: "www.endolla.barcelona",
+        operator_phone: phoneNumber,
+        operator_website: website,
       },
     },
     stations: [
@@ -2995,42 +3017,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:41+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:41+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3046,9 +3068,9 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
                 status: "OUT_OF_ORDER",
@@ -3057,18 +3079,18 @@ const locations: ChargingLocationStructure[] = [
             last_updated: "2023-09-28T12:10:49+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
                 status: "OUT_OF_ORDER",
@@ -3077,11 +3099,11 @@ const locations: ChargingLocationStructure[] = [
             last_updated: "2023-09-28T12:10:49+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3097,42 +3119,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:51+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:51+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3148,42 +3170,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T08:35:54+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-21T08:35:54+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3199,42 +3221,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:38+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:38+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3250,42 +3272,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:34+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:34+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3301,42 +3323,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:54+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:54+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3352,42 +3374,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3403,42 +3425,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:38+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:38+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3454,42 +3476,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:46+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:46+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3505,9 +3527,9 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
                 status: "OUT_OF_ORDER",
@@ -3516,18 +3538,18 @@ const locations: ChargingLocationStructure[] = [
             last_updated: "2024-05-31T11:29:14+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
                 status: "OUT_OF_ORDER",
@@ -3536,11 +3558,11 @@ const locations: ChargingLocationStructure[] = [
             last_updated: "2024-05-31T11:29:14+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3556,42 +3578,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:58+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:58+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3607,42 +3629,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:47+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3658,42 +3680,42 @@ const locations: ChargingLocationStructure[] = [
         ports: [
           {
             id: "1",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:42+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
           {
             id: "2",
-            connector_type: "WALL_OUTLET",
-            power_kw: 3.6,
-            charging_mechanism: "SOCKET",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
             port_status: [
               {
-                status: "AVAILABLE",
+                status: availableStatus,
               },
             ],
             last_updated: "2024-06-20T15:50:42+02:00",
             authentications: [
               {
-                authentication_id: "A1",
+                authentication_id: authenticationIdA1,
                 payment_required: true,
               },
             ],
-            notes: "MOTORCYCLE_ONLY",
+            notes: motorcycleRestrictionString,
             reservable: false,
           },
         ],
@@ -3701,7 +3723,7 @@ const locations: ChargingLocationStructure[] = [
       },
     ],
     onstreet_location: false,
-    language_code: "CA",
+    language_code: languageCode,
     last_updated: "2023-07-05T08:35:57+02:00",
   },
 ];

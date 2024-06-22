@@ -56,6 +56,7 @@ interface Station {
   label: string;
   coordinates: Coordinates;
   ports: Port[];
+  notes: string;
 }
 
 interface ChargingLocationStructure {
@@ -69,6 +70,9 @@ interface ChargingLocationStructure {
   access_restriction: string;
   host: Host;
   stations: Station[];
+  onstreet_location: boolean;
+  language_code: string;
+  last_updated: string;
 }
 
 export default ChargingLocationStructure;
