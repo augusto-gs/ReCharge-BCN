@@ -1,4 +1,5 @@
 import locations from "../../data/bikeData";
+import LocationCard from "../LocationCard/LocationCard";
 import TableStyled from "./TableStyled";
 
 const Table = () => (
@@ -10,7 +11,7 @@ const Table = () => (
     <ul className="table">
       {locations.map((location) => (
         <li className="table__item" key={location.id}>
-          {location.address.address_string}
+          {<LocationCard location={location} />}
         </li>
       ))}
     </ul>
