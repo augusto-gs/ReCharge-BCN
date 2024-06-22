@@ -1,14 +1,16 @@
 import Header from "../Header/Header";
-import Hero from "../Hero/Hero";
 import ContainerStyled from "../../../styles/shared/ContainerStyled";
-import Table from "../Table/Table";
+import { Routes, Navigate, Route } from "react-router-dom";
+import TablePage from "../../Pages/TablePage/TablePage";
 
 const App = (): React.ReactElement => {
   return (
     <ContainerStyled className="main-container">
       <Header />
-      <Hero />
-      <Table />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<TablePage />} />
+      </Routes>
     </ContainerStyled>
   );
 };
