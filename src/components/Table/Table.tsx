@@ -1,15 +1,20 @@
 import locations from "../../data/bikeData";
+import TableStyled from "./TableStyled";
 
 const Table = () => (
-  <section>
-    <h2>Charging points</h2>
-    <p>Look for the different charging ports available in the city </p>
+  <TableStyled className="charging-points">
+    <h2 className="charging-points__title">Charging points</h2>
+    <p className="charging-points__introduction">
+      Look for the different charging ports available in the city{" "}
+    </p>
     <ul className="table">
       {locations.map((location) => (
-        <li key={location.id}>{location.address.address_string}</li>
+        <li className="table__item" key={location.id}>
+          {location.address.address_string}
+        </li>
       ))}
     </ul>
-  </section>
+  </TableStyled>
 );
 
 export default Table;
