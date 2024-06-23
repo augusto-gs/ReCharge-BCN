@@ -16,6 +16,7 @@ const LocationCardStyled = styled.article`
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      font-style: normal;
     }
 
     &__status {

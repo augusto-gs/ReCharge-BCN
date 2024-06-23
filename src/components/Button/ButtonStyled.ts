@@ -13,7 +13,7 @@ const ButtonStyled = styled.button`
       text-transform: uppercase;
     }
 
-    &--detail {
+    &--details {
       background-color: #e7eaee;
       width: 100px;
       height: 32px;

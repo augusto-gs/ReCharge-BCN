@@ -21,13 +21,15 @@ const LocationCard = ({
 
   return (
     <LocationCardStyled className="location-card">
-      <span className="location-card__address">{address_string}</span>
+      <address className="location-card__address" role="listitem">
+        {address_string}
+      </address>
       <span className="location-card__status">{capitalizeFirst()}</span>
       <Button
         actionOnClick={() => {}}
         type={"button"}
         text={"Details"}
-        modifier={"button--detail"}
+        modifier={"button--details"}
         isDisabled={false}
       />
     </LocationCardStyled>
