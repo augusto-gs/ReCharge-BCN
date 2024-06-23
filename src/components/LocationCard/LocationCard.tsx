@@ -21,9 +21,7 @@ const LocationCard = ({
 
   return (
     <LocationCardStyled className="location-card">
-      <address className="location-card__address" role="listitem">
-        {address_string}
-      </address>
+      <address className="location-card__address">{address_string}</address>
       <span className="location-card__status">{capitalizeFirst()}</span>
       <Button
         actionOnClick={() => {}}

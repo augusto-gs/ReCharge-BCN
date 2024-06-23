@@ -9,10 +9,9 @@ describe("Given a LocationCard component", () => {
 
       render(<LocationCard location={locationMock} />);
 
-      const address = screen.getByRole("listitem");
+      const address = screen.getByText(addressText);
 
       expect(address).toBeInTheDocument();
-      expect(address.textContent).toBe(addressText);
     });
   });
 
