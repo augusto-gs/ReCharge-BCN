@@ -25,5 +25,5 @@ const motorbikeSlice = createSlice({
 
 export const {
   actions: { loadMotorbikesLocations: loadMotorbikesActionCreator },
-  reducer: motorbikesReducer,
+  reducer: motorbikesLocationReducer,
 } = motorbikeSlice;
