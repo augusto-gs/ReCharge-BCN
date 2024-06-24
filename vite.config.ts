@@ -23,4 +23,13 @@ export default defineConfig({
       ],
     },
   },
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://opendata-ajuntament.barcelona.cat",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
 });

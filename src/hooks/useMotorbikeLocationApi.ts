@@ -1,18 +1,23 @@
 import axios from "axios";
 import ChargingLocationStructure from "../types";
+import { useCallback } from "react";
 
-axios.defaults.baseURL = import.meta.env.VITE_BIKE_API_URL;
+axios.defaults.url = import.meta.env.VITE_BIKE_API_URL;
 
 const useMotorbikeLocationApi = () => {
-  const getBikeLocations = async () => {
-    const {
-      data: { locations },
-    } = await axios.get<{ locations: ChargingLocationStructure[] }>(
-      axios.defaults.baseURL!,
-    );
+  const getBikeLocations = useCallback(async () => {
+    try {
+      const {
+        data: { locations },
+      } = await axios.get<{
+        locations: ChargingLocationStructure[];
+      }>(axios.defaults.url!);
 
-    return locations;
-  };
+      return locations;
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
 
   return { getBikeLocations };
 };
