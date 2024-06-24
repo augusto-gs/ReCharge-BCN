@@ -2,7 +2,7 @@ import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { motorbikesReducer } from "./features/motorbikes/motorbikeSlice";
 
 export const store = configureStore({
-  reducer: { motorbikeState: motorbikesReducer },
+  reducer: { motorbikesLocationState: motorbikesReducer },
 });
 
 export type AppDispatch = typeof store.dispatch;

@@ -15,7 +15,7 @@ describe("Given a reducer on a motorbikesSlice", () => {
         loadMotorbikesActionCreator(locationsMock),
       );
 
-      expect(updatedState.motorbikes).toStrictEqual(locationsMock);
+      expect(updatedState.locations).toStrictEqual(locationsMock);
     });
   });
 });
