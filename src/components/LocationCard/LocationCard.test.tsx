@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import LocationCard from "./LocationCard";
-import locationMock from "../../mocks/locationMock";
+import { locationMock } from "../../mocks/locationMock";
 
 describe("Given a LocationCard component", () => {
   describe("When it is rendered on screen", () => {

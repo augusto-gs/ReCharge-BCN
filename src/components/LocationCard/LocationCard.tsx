@@ -1,4 +1,5 @@
 import ChargingLocationStructure from "../../types";
+import capitalizeFirst from "../../utils/capitalizeFirst";
 import Button from "../Button/Button";
 import LocationCardStyled from "./LocationCardStyled";
 
@@ -12,17 +13,12 @@ const LocationCard = ({
     access_restriction,
   },
 }: LocationCardProps): React.ReactElement => {
-  const capitalizeFirst = () => {
-    return (
-      access_restriction.charAt(0).toUpperCase() +
-      access_restriction.toLowerCase().slice(1)
-    );
-  };
-
   return (
     <LocationCardStyled className="location-card">
       <address className="location-card__address">{address_string}</address>
-      <span className="location-card__status">{capitalizeFirst()}</span>
+      <span className="location-card__status">
+        {capitalizeFirst(access_restriction)}
+      </span>
       <Button
         actionOnClick={() => {}}
         type={"button"}

@@ -31,7 +31,7 @@ const LocationCardStyled = styled.article`
     }
   }
 
-  .gbdNjz {
+  .cMcEyo {
     grid-column: 2 / 3;
     justify-self: center;
   }
