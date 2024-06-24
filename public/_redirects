@@ -1,0 +1,2 @@
+/api/*  https://opendata-ajuntament.barcelona.cat/:splat  200
+/* /index.html 200
