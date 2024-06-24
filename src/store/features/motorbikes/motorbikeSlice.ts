@@ -2,23 +2,28 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import ChargingLocationStructure from "../../../types";
 
 export interface MotorbikeStateStructure {
-  motorbikes: ChargingLocationStructure[];
+  locations: ChargingLocationStructure[];
 }
 
-const initialMotorbikesState = {} as MotorbikeStateStructure;
+const initialMotorbikesLocationState: MotorbikeStateStructure = {
+  locations: [],
+};
 
 const motorbikeSlice = createSlice({
   name: "motorbikes",
-  initialState: initialMotorbikesState,
+  initialState: initialMotorbikesLocationState,
   reducers: {
-    loadMotorbikes: (
+    loadMotorbikesLocations: (
       currentState: MotorbikeStateStructure,
       action: PayloadAction<ChargingLocationStructure[]>,
-    ) => ({ ...currentState, motorbikes: action.payload }),
+    ): MotorbikeStateStructure => ({
+      ...currentState,
+      locations: action.payload,
+    }),
   },
 });
 
 export const {
-  actions: { loadMotorbikes: loadMotorbikesActionCreator },
-  reducer: motorbikesReducer,
+  actions: { loadMotorbikesLocations: loadMotorbikesActionCreator },
+  reducer: motorbikesLocationReducer,
 } = motorbikeSlice;
