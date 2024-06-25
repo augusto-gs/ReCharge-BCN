@@ -4,9 +4,10 @@ import LocationCard from "../LocationCard/LocationCard";
 import TableStyled from "./TableStyled";
 
 const Table = (): React.ReactElement => {
-  const { locations } = useAppSelector(
-    (state) => state.motorbikesLocationState,
-  );
+  const {
+    motorbikesLocationState: { locations },
+    uiState: { isLoading },
+  } = useAppSelector((state) => state);
 
   return (
     <TableStyled className="charging-points">
@@ -15,6 +16,7 @@ const Table = (): React.ReactElement => {
         Look for the different charging ports available in the city{" "}
       </p>
       <ul className="table">
+        {isLoading ? <Loading /> : null}
         {locations.map((location) => (
           <li className="table__item" key={location.id}>
             {<LocationCard location={location} />}

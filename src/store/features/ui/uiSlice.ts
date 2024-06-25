@@ -23,6 +23,9 @@ const uiSlice = createSlice({
 });
 
 export const {
-  actions: { showLoading: showLoadingActionCreator },
+  actions: {
+    showLoading: showLoadingActionCreator,
+    hideLoading: hideLoadingActionCreator,
+  },
   reducer: uiReducer,
 } = uiSlice;
