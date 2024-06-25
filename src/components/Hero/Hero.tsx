@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 import HeroStyled from "./HeroStyled";
 
-const Hero = () => (
+const Hero = (): React.ReactElement => (
   <HeroStyled className="hero">
     <div className="hero__layout">
       <h1 className="hero__title">Find your motorbike</h1>

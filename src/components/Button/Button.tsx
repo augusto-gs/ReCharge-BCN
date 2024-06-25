@@ -14,7 +14,7 @@ const Button = ({
   isDisabled,
   modifier,
   type,
-}: ButtonProps) => (
+}: ButtonProps): React.ReactElement => (
   <ButtonStyled
     className={`button ${modifier}`}
     onClick={actionOnClick}
