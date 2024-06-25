@@ -2,7 +2,7 @@ import { useAppSelector } from "../../store/hooks";
 import LocationCard from "../LocationCard/LocationCard";
 import TableStyled from "./TableStyled";
 
-const Table = () => {
+const Table = (): React.ReactElement => {
   const { locations } = useAppSelector(
     (state) => state.motorbikesLocationState,
   );
