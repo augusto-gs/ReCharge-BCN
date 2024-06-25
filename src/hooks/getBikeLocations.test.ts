@@ -4,6 +4,7 @@ import { locationsMock } from "../mocks/locationMock";
 import { server } from "../mocks/msw/node";
 import { errorHandlers } from "../mocks/msw/errorHandlers";
 import { toast } from "react-toastify";
+import { providerWrapper } from "../testUtils/testUtils";
 
 describe("Given a useMotorbikeLocation custom hook", () => {
   describe("When it calls its getBikeLocations function", () => {
@@ -12,7 +13,9 @@ describe("Given a useMotorbikeLocation custom hook", () => {
         result: {
           current: { getBikeLocations },
         },
-      } = renderHook(() => useMotorbikeLocationApi());
+      } = renderHook(() => useMotorbikeLocationApi(), {
+        wrapper: providerWrapper,
+      });
 
       const locations = await getBikeLocations();
 
@@ -28,7 +31,9 @@ describe("Given a useMotorbikeLocation custom hook", () => {
         result: {
           current: { getBikeLocations },
         },
-      } = renderHook(() => useMotorbikeLocationApi());
+      } = renderHook(() => useMotorbikeLocationApi(), {
+        wrapper: providerWrapper,
+      });
 
       const spy = vi.spyOn(toast, "error");
 
