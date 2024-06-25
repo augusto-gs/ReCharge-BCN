@@ -7,12 +7,21 @@ import { motorbikesLocationReducer } from "../store/features/motorbikes/motorbik
 import { configureStore } from "@reduxjs/toolkit";
 import { locationsMock } from "../mocks/locationMock";
 import { Provider } from "react-redux";
+import { uiReducer } from "../store/features/ui/uiSlice";
+import { PropsWithChildren } from "react";
+import { store } from "../store";
 
 const mockStore = configureStore({
-  reducer: { motorbikesLocationState: motorbikesLocationReducer },
+  reducer: {
+    motorbikesLocationState: motorbikesLocationReducer,
+    uiState: uiReducer,
+  },
   preloadedState: {
     motorbikesLocationState: {
       locations: locationsMock,
+    },
+    uiState: {
+      isLoading: false,
     },
   },
 });
@@ -36,5 +45,13 @@ export const customRender = (
     ) : (
       elements
     ),
+  );
+};
+
+export const providerWrapper = ({ children }: PropsWithChildren) => {
+  return (
+    <BrowserRouter>
+      <Provider store={store}>{children}</Provider>
+    </BrowserRouter>
   );
 };
