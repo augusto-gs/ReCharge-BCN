@@ -1,6 +1,8 @@
+import LoadingStyled from "./LoadingStyled";
+
 const Loading = (): React.ReactElement => {
   return (
-    <div className="loading">
+    <LoadingStyled className="loading">
       <img
         src="/images/loading.svg"
         alt="Loading icon spinning"
@@ -8,7 +10,7 @@ const Loading = (): React.ReactElement => {
         width="150"
         height="150"
       />
-    </div>
+    </LoadingStyled>
   );
 };
 

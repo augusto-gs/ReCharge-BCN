@@ -1,4 +1,5 @@
 import { useAppSelector } from "../../store/hooks";
+import Loading from "../Loading/Loading";
 import LocationCard from "../LocationCard/LocationCard";
 import TableStyled from "./TableStyled";
 

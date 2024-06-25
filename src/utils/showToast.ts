@@ -12,13 +12,16 @@ const showToast = (
         progressStyle: { backgroundColor: "#ccEAc4" },
         ...options,
       });
+
       break;
+
     case "error":
       toast.error(message, {
         style: { background: "#d65745" },
         progressStyle: { backgroundColor: "#F3CDC8" },
         ...options,
       });
+
       break;
   }
 };
