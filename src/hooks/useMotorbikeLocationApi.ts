@@ -1,6 +1,7 @@
 import axios from "axios";
 import ChargingLocationStructure from "../types";
 import { useCallback } from "react";
+import showToast from "../utils/showToast";
 
 axios.defaults.url = import.meta.env.VITE_BIKE_API_URL;
 
@@ -15,7 +16,7 @@ const useMotorbikeLocationApi = () => {
 
       return locations;
     } catch (error) {
-      console.log(error);
+      showToast("error", "Couldn't load locations!");
     }
   }, []);
 

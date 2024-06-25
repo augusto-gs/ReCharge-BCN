@@ -3,6 +3,7 @@ import useMotorbikeLocationApi from "./useMotorbikeLocationApi";
 import { locationsMock } from "../mocks/locationMock";
 import { server } from "../mocks/msw/node";
 import { errorHandlers } from "../mocks/msw/errorHandlers";
+import { toast } from "react-toastify";
 
 describe("Given a useMotorbikeLocation custom hook", () => {
   describe("When it calls its getBikeLocations function", () => {
@@ -29,7 +30,7 @@ describe("Given a useMotorbikeLocation custom hook", () => {
         },
       } = renderHook(() => useMotorbikeLocationApi());
 
-      const spy = vi.spyOn(console, "log");
+      const spy = vi.spyOn(toast, "error");
 
       await getBikeLocations();
 
