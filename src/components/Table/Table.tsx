@@ -4,10 +4,10 @@ import LocationCard from "../LocationCard/LocationCard";
 import TableStyled from "./TableStyled";
 
 const Table = (): React.ReactElement => {
-  const {
-    motorbikesLocationState: { locations },
-    uiState: { isLoading },
-  } = useAppSelector((state) => state);
+  const { locations } = useAppSelector(
+    (state) => state.motorbikesLocationState,
+  );
+  const { isLoading } = useAppSelector((state) => state.uiState);
 
   return (
     <TableStyled className="charging-points">

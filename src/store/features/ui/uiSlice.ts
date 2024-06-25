@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface UiStateStructure {
+export interface UiStateStructure {
   isLoading: boolean;
 }
 
