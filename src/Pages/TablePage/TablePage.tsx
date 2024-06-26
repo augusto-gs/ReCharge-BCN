@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
 import Table from "../../components/Table/Table";
-import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi";
+import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi/useMotorbikeLocationApi";
 import { useAppDispatch } from "../../store/hooks";
 import { loadMotorbikesActionCreator } from "../../store/features/motorbikes/motorbikeSlice";
 

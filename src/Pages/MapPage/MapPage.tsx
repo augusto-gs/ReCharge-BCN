@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import MapDisplay from "../../components/MapDisplay/MapDisplay";
 import MapPageStyled from "./MapPageStyled";
-import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi";
+import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi/useMotorbikeLocationApi";
 import { useAppDispatch } from "../../store/hooks";
 import { loadMotorbikesActionCreator } from "../../store/features/motorbikes/motorbikeSlice";
 

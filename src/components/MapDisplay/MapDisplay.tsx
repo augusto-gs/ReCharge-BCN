@@ -9,9 +9,9 @@ import VectorSource from "ol/source/Vector";
 import Vector from "ol/layer/Vector";
 import MapDisplayStyled from "./MapDisplayStyled";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi";
+import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi/useMotorbikeLocationApi";
 import hasAvailableLocations from "../../utils/hasAvailableLocations";
-import useMapLocations from "../../hooks/useMapLocations";
+import useMapLocations from "../../hooks/useMapLocations/useMapLocations";
 
 const MapDisplay = () => {
   const { getBikeLocations } = useMotorbikeLocationApi();
