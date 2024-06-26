@@ -31,11 +31,6 @@ const LocationCardStyled = styled.article`
     }
   }
 
-  .gdNoIB {
-    grid-column: 2 / 3;
-    justify-self: center;
-  }
-
   @media (min-width: 480px) {
     align-items: center;
     display: flex;

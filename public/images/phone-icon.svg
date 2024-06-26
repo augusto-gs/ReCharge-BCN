@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+	<title>telephone</title>
+	<defs>
+		<image width="16" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAahJREFUOE+N0j1rFFEUxvH/M2qRGVsFK7G1UQuxEVFIoiBpRHypLCKks4hNmMzCmpmIIlgGIcFGGxNFVETZYKWfwcIyn0AwO7Ngdh6ZJRMmMWR3yjnn/O659xwBHH3s0/2SWDCJWclbiqv/o3yqisuSVZlOadYU8B7zIm+pPRIQZn4p87vb0mzdTQVi3o6CKMzsPJGap0ULPuOA9TzR8WFdDIDyMCd7c9qok8dSP0FcKBJdGQ6k/lCKZ71EP6rkMPMn4FQQcGsz1s+hwFjqm4KpvKV7AyB12+JikWh8WHEVH9w9yvwL86Db0tftLlwGXOrF+j4MGQDVqYir+RYTtLUZpp5GrEiMd+f17SBk5/WjzKuGP3mi6apgcDWxZrhTJHqz3VkHOItZqke8A4SLPoFZb84/WvSETQfzyOK2xDv3+ayA5Tpv1/zrrWwi4YLPE3C/6iBPNLN32XYBzaDhS3GMmBn93e8N6mX7D2ggT4FzEnPdeb3ei0SpH1pM7gvUyVHmu4YlYEPwaivg45E+h/oB1wSzgusHAo3VviExBVwG+hVaJHpexf8BpwHClyG1vjEAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>
