@@ -7,7 +7,7 @@ describe("Given a Hero component", () => {
     test("Then it should show a 'Find your motorbike' title on a heading", () => {
       const titleText = "Find your motorbike";
 
-      customRender(<Hero />);
+      customRender(<Hero />, true);
 
       const hero = screen.getByRole("heading", { name: titleText });
 
