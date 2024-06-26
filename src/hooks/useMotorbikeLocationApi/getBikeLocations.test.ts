@@ -1,10 +1,10 @@
 import { renderHook } from "@testing-library/react";
-import useMotorbikeLocationApi from "./useMotorbikeLocationApi";
-import { locationsMock } from "../mocks/locationMock";
-import { server } from "../mocks/msw/node";
-import { errorHandlers } from "../mocks/msw/errorHandlers";
 import { toast } from "react-toastify";
-import { providerWrapper } from "../testUtils/testUtils";
+import { server } from "../../mocks/msw/node";
+import { providerWrapper } from "../../testUtils/testUtils";
+import useMotorbikeLocationApi from "./useMotorbikeLocationApi";
+import { errorHandlers } from "../../mocks/msw/errorHandlers";
+import { locationsMock } from "../../mocks/locationMock";
 
 describe("Given a useMotorbikeLocation custom hook", () => {
   describe("When it calls its getBikeLocations function", () => {

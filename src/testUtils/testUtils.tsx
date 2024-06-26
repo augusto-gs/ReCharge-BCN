@@ -33,7 +33,7 @@ export const customRender = (
   const elements = (
     <ThemeProvider theme={mainTheme}>
       <GlobalStyle />
-      {children}
+      <Provider store={mockStore}>{children}</Provider>
     </ThemeProvider>
   );
 

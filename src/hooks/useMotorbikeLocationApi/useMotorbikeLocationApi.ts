@@ -1,12 +1,12 @@
 import axios from "axios";
-import ChargingLocationStructure from "../types";
+import ChargingLocationStructure from "../../types";
 import { useCallback } from "react";
-import showToast from "../utils/showToast";
-import { useAppDispatch } from "../store/hooks";
+import showToast from "../../utils/showToast";
+import { useAppDispatch } from "../../store/hooks";
 import {
   hideLoadingActionCreator,
   showLoadingActionCreator,
-} from "../store/features/ui/uiSlice";
+} from "../../store/features/ui/uiSlice";
 
 axios.defaults.url = import.meta.env.VITE_BIKE_API_URL;
 
