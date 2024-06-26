@@ -52,7 +52,7 @@ const MapDisplay = () => {
 
     source.addFeatures(hasMapLocations());
 
-    return () => map.setTarget(undefined);
+    return () => map.setTarget();
   }, [hasMapLocations, dispatch, getBikeLocations, locations]);
 
   return (
