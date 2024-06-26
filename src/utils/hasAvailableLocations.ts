@@ -1,6 +1,6 @@
 import ChargingLocationStructure from "../types";
 
-const showAvailableLocations = (locations: ChargingLocationStructure[]) => {
+const hasAvailableLocations = (locations: ChargingLocationStructure[]) => {
   const availableLocations = locations.filter((location) =>
     location.stations.some((station) =>
       station.ports.some((port) => port.port_status[0].status === "AVAILABLE"),
@@ -10,4 +10,4 @@ const showAvailableLocations = (locations: ChargingLocationStructure[]) => {
   return availableLocations;
 };
 
-export default showAvailableLocations;
+export default hasAvailableLocations;

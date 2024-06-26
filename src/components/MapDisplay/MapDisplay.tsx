@@ -10,7 +10,7 @@ import Vector from "ol/layer/Vector";
 import MapDisplayStyled from "./MapDisplayStyled";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi";
-import showAvailableLocations from "../../utils/showAvailableLocations";
+import hasAvailableLocations from "../../utils/hasAvailableLocations";
 import useMapLocations from "../../hooks/useMapLocations";
 
 const MapDisplay = () => {
@@ -20,9 +20,7 @@ const MapDisplay = () => {
     (state) => state.motorbikesLocationState,
   );
 
-  const { hasMapLocations } = useMapLocations(
-    showAvailableLocations(locations),
-  );
+  const { hasMapLocations } = useMapLocations(hasAvailableLocations(locations));
 
   const dispatch = useAppDispatch();
 
