@@ -13,9 +13,11 @@ vi.stubGlobal("ResizeObserver", ResizeObserverMock);
 describe("Given a MapDisplay component", () => {
   describe("When it is rendered on screen", () => {
     test("Then it should show a map", () => {
+      const expectedTestID = "map";
+
       customRender(<MapDisplay />, true);
 
-      const map = screen.getByTestId("map");
+      const map = screen.getByTestId(expectedTestID);
       expect(map).toBeInTheDocument();
     });
   });

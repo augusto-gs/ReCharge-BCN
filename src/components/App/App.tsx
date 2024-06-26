@@ -1,10 +1,10 @@
 import Header from "../Header/Header";
 import ContainerStyled from "../../../styles/shared/ContainerStyled";
 import { Routes, Navigate, Route } from "react-router-dom";
-import TablePage from "../../pages/TablePage/TablePage";
 import ToastStyled from "../../../styles/shared/ToastStyled";
 import "react-toastify/dist/ReactToastify.min.css";
 import MapPage from "../../pages/MapPage/MapPage";
+import TablePage from "../../pages/TablePage/TablePage";
 
 const App = (): React.ReactElement => (
   <ContainerStyled className="main-container">
