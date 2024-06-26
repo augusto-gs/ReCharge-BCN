@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi/useMotorbikeLocationApi";
 import { useAppDispatch } from "../../store/hooks";
 import { loadMotorbikesActionCreator } from "../../store/features/motorbikes/motorbikeSlice";
+import Footer from "../Footer/Footer";
 
 const App = (): React.ReactElement => {
   const { getBikeLocations } = useMotorbikeLocationApi();
@@ -33,6 +34,7 @@ const App = (): React.ReactElement => {
         <Route path="/home" element={<TablePage />} />
         <Route path="/map" element={<MapPage />} />
       </Routes>
+      <Footer />
     </ContainerStyled>
   );
 };
