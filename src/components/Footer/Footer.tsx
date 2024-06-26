@@ -1,16 +1,22 @@
+import FooterStyled from "./FooterStyled";
+
 const Footer = (): React.ReactElement => (
-  <footer className="footer">
-    <span className="footer__container"></span>
-    <button className="footer__button">Contact us!</button>
-    <div className="footer__text-container">
-      <div className="footer__address-container">
+  <FooterStyled className="footer">
+    <span className="footer__trademark">© 2024 All Rights Reserved</span>
+    <button className="footer__button">
+      <a href="https://endolla.barcelona/ca/contacte" target="_blank">
+        Contact us
+      </a>
+    </button>
+    <ul className="footer__text-container">
+      <li className="footer__list-item">
         <img
           src="/images/host-location-icon.svg"
           alt="Light blue location icon"
         />
-        <address className="footer__address">Carrer de Calàbria, 66</address>
-      </div>
-      <div className="footer__phone-container">
+        <span className="footer__address">Carrer de Calàbria, 66</span>
+      </li>
+      <li className="footer__list-item">
         <img
           src="/images/phone-icon.svg"
           alt="Light blue phone icon"
@@ -18,8 +24,8 @@ const Footer = (): React.ReactElement => (
           height="16"
         />
         <span className="footer__phone">937 064 866</span>
-      </div>
-      <div className="footer__web-container">
+      </li>
+      <li className="footer__list-item">
         <img
           src="/images/world-wide-web-icon.svg"
           alt="Light blue world icon"
@@ -27,9 +33,9 @@ const Footer = (): React.ReactElement => (
           height="16"
         />
         <span className="footer__website">www.endolla.barcelona</span>
-      </div>
-    </div>
-  </footer>
+      </li>
+    </ul>
+  </FooterStyled>
 );
 
 export default Footer;

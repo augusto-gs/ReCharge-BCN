@@ -19,6 +19,8 @@ const ButtonStyled = styled.button`
       height: 32px;
       font-weight: 400;
       color: #64748b;
+      grid-column: 2 / 3;
+      justify-self: center;
 
       &::first-letter {
         text-transform: uppercase;
