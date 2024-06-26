@@ -55,7 +55,13 @@ const MapDisplay = () => {
     return () => map.setTarget(undefined);
   }, [hasMapLocations, dispatch, getBikeLocations, locations]);
 
-  return <MapDisplayStyled id="map" tabIndex={0}></MapDisplayStyled>;
+  return (
+    <MapDisplayStyled
+      data-testid="map"
+      id="map"
+      tabIndex={0}
+    ></MapDisplayStyled>
+  );
 };
 
 export default MapDisplay;
