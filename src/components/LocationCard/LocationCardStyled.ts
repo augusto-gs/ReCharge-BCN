@@ -31,7 +31,7 @@ const LocationCardStyled = styled.article`
     }
   }
 
-  .cMcEyo {
+  .gdNoIB {
     grid-column: 2 / 3;
     justify-self: center;
   }

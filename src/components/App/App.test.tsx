@@ -2,6 +2,7 @@ import { screen } from "@testing-library/react";
 import { customRender } from "../../testUtils/testUtils";
 import App from "./App";
 import { MemoryRouter } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 
 const ResizeObserverMock = vi.fn(() => ({
   observe: vi.fn(),
@@ -41,6 +42,23 @@ describe("Given an App component", () => {
       const address = screen.getByText(addressText);
 
       expect(address).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is rendered on the Home page and the user clicks on the Map button on the Hero", () => {
+    test("Then it should take user to Map page", async () => {
+      const buttonText = "Map";
+      const expectedTestId = "map";
+
+      customRender(<App />, true);
+
+      const button = screen.getByRole("button", { name: buttonText });
+
+      await userEvent.click(button);
+
+      const map = await screen.findByTestId(expectedTestId);
+
+      expect(map).toBeInTheDocument();
     });
   });
 
