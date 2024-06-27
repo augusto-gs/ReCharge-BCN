@@ -17,6 +17,8 @@ const LocationCardStyled = styled.article`
       overflow: hidden;
       text-overflow: ellipsis;
       font-style: normal;
+      display: flex;
+      gap: 4px;
     }
 
     &__status {

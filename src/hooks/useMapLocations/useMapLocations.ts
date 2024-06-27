@@ -22,7 +22,7 @@ const useMapLocations = (availableLocations: ChargingLocationStructure[]) => {
           new Style({
             image: new Icon({
               anchor: [0, 1],
-              src: "/images/location_icon.svg",
+              src: "/images/location_icon_36px.svg",
             }),
           }),
         );
