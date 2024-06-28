@@ -17,6 +17,7 @@ const useMapLocations = (availableLocations: ChargingLocationStructure[]) => {
         const availableLocation = new Point(fromLonLat([longitude, latitude]));
 
         const pinOnMap = new Feature(availableLocation);
+        pinOnMap.setId(location.id);
 
         pinOnMap.setStyle(
           new Style({
