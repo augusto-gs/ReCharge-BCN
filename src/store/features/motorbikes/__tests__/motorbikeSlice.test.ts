@@ -1,9 +1,9 @@
-import { locationsMock } from "../../../mocks/locationMock";
+import { locationsMock } from "../../../../mocks/locationMock";
 import {
   loadMotorbikesActionCreator,
   motorbikesLocationReducer,
   MotorbikeStateStructure,
-} from "./motorbikeSlice";
+} from "../motorbikeSlice";
 
 describe("Given a reducer on a motorbikesSlice", () => {
   describe("When it receives a current state and the motorbikes locations", () => {
