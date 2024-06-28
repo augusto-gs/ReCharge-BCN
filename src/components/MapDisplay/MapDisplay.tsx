@@ -13,6 +13,8 @@ import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi/useMoto
 import hasAvailableLocations from "../../utils/hasAvailableLocations";
 import useMapLocations from "../../hooks/useMapLocations/useMapLocations";
 import removeCarLocationChargers from "../../utils/removeCarLocationChargers";
+import LocationDetail from "../LocationDetail/LocationDetail";
+import { locationMock } from "../../mocks/locationMock";
 
 const MapDisplay = () => {
   const { getBikeLocations } = useMotorbikeLocationApi();
@@ -61,11 +63,9 @@ const MapDisplay = () => {
   }, [hasMapLocations, dispatch, getBikeLocations, locations]);
 
   return (
-    <MapDisplayStyled
-      data-testid="map"
-      id="map"
-      tabIndex={0}
-    ></MapDisplayStyled>
+    <MapDisplayStyled data-testid="map" id="map" tabIndex={0}>
+      <LocationDetail location={locationMock} />
+    </MapDisplayStyled>
   );
 };
 
