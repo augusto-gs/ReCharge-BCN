@@ -1,4 +1,4 @@
-import ChargingLocationStructure from "../types";
+import { ChargingLocationStructure } from "../types";
 
 const removeCarLocationChargers = (locations: ChargingLocationStructure[]) =>
   locations.map((location) => ({
