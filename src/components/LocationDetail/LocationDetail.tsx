@@ -1,6 +1,7 @@
 import { ChargingLocationStructure } from "../../types";
 import countNumberOfAvailableStations from "../../utils/countNumberOfAvailableStations";
 import Button from "../Button/Button";
+import LocationDetailStyled from "./LocationDetailStyled";
 
 interface LocationDetailProps {
   location: ChargingLocationStructure;
@@ -16,17 +17,17 @@ const LocationDetail = ({
     countNumberOfAvailableStations(stations);
 
   return (
-    <div className="location-detail">
+    <LocationDetailStyled className="location-detail">
       <Button
         actionOnClick={() => {}}
         type={"button"}
-        text={""}
+        text={"x"}
         modifier={"button--closer"}
         isDisabled={false}
       />
-      <span className="location-detail__address">{address_string}</span>
-      <span className="location-chargers">{`Available chargers${availablePorts}/${totalPorts}`}</span>
-    </div>
+      <li className="location-detail__address">{address_string}</li>
+      <li className="location-chargers">{`Available chargers: ${availablePorts}/${totalPorts}`}</li>
+    </LocationDetailStyled>
   );
 };
 

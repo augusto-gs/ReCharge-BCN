@@ -26,6 +26,17 @@ const ButtonStyled = styled.button`
         text-transform: uppercase;
       }
     }
+
+    &--closer {
+      background: transparent;
+      width: 20px;
+      height: 20px;
+      align-self: flex-end;
+      position: relative;
+      bottom: 10px;
+      font-size: 16px;
+      right: 3px;
+    }
   }
 `;
 
