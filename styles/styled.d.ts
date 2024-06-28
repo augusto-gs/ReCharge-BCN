@@ -8,6 +8,7 @@ declare module "styled-components" {
     };
     colors: {
       light: string;
+      tooltip: string;
     };
   }
 }
