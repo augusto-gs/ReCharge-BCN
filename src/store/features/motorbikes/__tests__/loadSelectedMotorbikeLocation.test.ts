@@ -1,5 +1,5 @@
 import { locationsMock } from "../../../../mocks/locationMock";
-import ChargingLocationStructure from "../../../../types";
+import { ChargingLocationStructure } from "../../../../types";
 import {
   loadSelectedMotorbikeActionCreator,
   motorbikesLocationReducer,

@@ -1,4 +1,4 @@
-import ChargingLocationStructure from "../types";
+import { ChargingLocationStructure } from "../types";
 
 const hasAvailableLocations = (locations: ChargingLocationStructure[]) => {
   const availableLocations = locations.filter((location) =>

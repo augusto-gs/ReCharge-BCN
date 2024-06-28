@@ -1,5 +1,5 @@
 import Point from "ol/geom/Point";
-import ChargingLocationStructure from "../../types";
+import { ChargingLocationStructure } from "../../types";
 import Feature from "ol/Feature";
 import Style from "ol/style/Style";
 import Icon from "ol/style/Icon";

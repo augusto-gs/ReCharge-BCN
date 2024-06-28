@@ -1,4 +1,4 @@
-import ChargingLocationStructure from "../../types";
+import { ChargingLocationStructure } from "../../types";
 import capitalizeFirst from "../../utils/capitalizeFirst";
 import Button from "../Button/Button";
 import LocationCardStyled from "./LocationCardStyled";

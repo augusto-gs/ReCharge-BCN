@@ -1,4 +1,4 @@
-import ChargingLocationStructure from "../types";
+import { ChargingLocationStructure } from "../types";
 
 const networkName = "Endolla Barcelona";
 const cityNetwork = "Barcelona de Serveis Municipals S.A.";
@@ -87,6 +87,26 @@ export const locationsMock: ChargingLocationStructure[] = [
             port_status: [
               {
                 status: availableStatus,
+              },
+            ],
+            last_updated: "2024-06-20T12:00:00Z",
+            authentications: [
+              {
+                authentication_id: authenticationIdA1,
+                payment_required: true,
+              },
+            ],
+            notes: motorcycleRestrictionString,
+            reservable: true,
+          },
+          {
+            id: "2",
+            connector_type: wallConnector,
+            power_kw: standardKillowatts,
+            charging_mechanism: socketChargingMechanism,
+            port_status: [
+              {
+                status: inUseStatus,
               },
             ],
             last_updated: "2024-06-20T12:00:00Z",

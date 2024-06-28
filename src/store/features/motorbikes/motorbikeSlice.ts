@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import ChargingLocationStructure from "../../../types";
+import { ChargingLocationStructure } from "../../../types";
 
 export interface MotorbikeStateStructure {
   locations: ChargingLocationStructure[];
