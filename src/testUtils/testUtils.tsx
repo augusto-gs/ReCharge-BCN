@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { uiReducer } from "../store/features/ui/uiSlice";
 import { PropsWithChildren } from "react";
 import { store } from "../store";
+import ChargingLocationStructure from "../types";
 
 const mockStore = configureStore({
   reducer: {
@@ -19,6 +20,7 @@ const mockStore = configureStore({
   preloadedState: {
     motorbikesLocationState: {
       locations: locationsMock,
+      location: {} as ChargingLocationStructure,
     },
     uiState: {
       isLoading: false,

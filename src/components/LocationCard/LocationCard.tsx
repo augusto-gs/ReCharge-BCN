@@ -15,7 +15,15 @@ const LocationCard = ({
 }: LocationCardProps): React.ReactElement => {
   return (
     <LocationCardStyled className="location-card">
-      <address className="location-card__address">{address_string}</address>
+      <address className="location-card__address">
+        <img
+          src="/images/location_icon_24px.svg"
+          alt="bule location icon"
+          width="20"
+          height="20"
+        />
+        {address_string}
+      </address>
       <span className="location-card__status">
         {capitalizeFirst(access_restriction)}
       </span>

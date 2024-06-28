@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>pin (3)</title>
+	<defs>
+		<image  width="18" height="24" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAMAAADAi10DAAAAAXNSR0IB2cksfwAAAMBQTFRFAAAAAKr/AKn/AKr/AKr/AKr/AKv/AKn/AKj/AKr/AKr/AKr/AKz/AKn/AKr/AKr/AKv/AKr/AKr/BKX/D5r+LXf8N2z7LXj8Dpn+AKr/AKr/Nm37Dpr+AKn/AKr/AKr/BKb/AKr/AKr/LHj8C53+AKn/AP//AKr/AKr/AKr/AKr/AKr/AKr/AL//AKn/AKr/AKv/AKT/AKr/ALH/AKr/AKr/AKz/AKv/AKr/AKr/AKv/AKr/AKv/AKr/AID/AKr/99l7pQAAAEB0Uk5TAEWb2PTXmkQmwf/AJT7u7T0kvv///////0Kc//+Y1vP/8vb//0EB3N5pZgPVBEpInQ7dDSrxLkn8/U94dpkCn98Veh8AAAD5SURBVHicXZDdSwJREMXPaTFdYQu2QujBQjCMoOwDeoj641V6EJbIqIeIoKIPFErSMN3Fbe7cbdtt4J6Z+xvmcO8QJihhZKoXOSUSSFpjRR4j/EaBQ0GlxT8ibOGD8L+1djGxs1+ka4qy2n+acpnrQ0OKoRq9i67QKUryYjs0ElnlxkB8nMS83AcqrL39Q7PcoPeqg2q/5Ki9+yIasf5s+n4Yyy8MgcMtPtmnen3N1Tmx/YBsbN4QO7zPkLBxJZvYvcug+qXuq3mbkmhmV7g/eUxIg4FFOOK1krVKN1k0cMye6B7PkSKcXIgcdJBBOA1w2EYOnRFxy5Y/c5k46ZO62qgAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="3" y="0"/>
+</svg>
