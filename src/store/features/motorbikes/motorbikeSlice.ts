@@ -3,10 +3,12 @@ import ChargingLocationStructure from "../../../types";
 
 export interface MotorbikeStateStructure {
   locations: ChargingLocationStructure[];
+  location: ChargingLocationStructure;
 }
 
 const initialMotorbikesLocationState: MotorbikeStateStructure = {
   locations: [],
+  location: {} as ChargingLocationStructure,
 };
 
 const motorbikeSlice = createSlice({
@@ -20,10 +22,18 @@ const motorbikeSlice = createSlice({
       ...currentState,
       locations: action.payload,
     }),
+
+    loadSelectedMotorbikeLocation: (
+      currentState: MotorbikeStateStructure,
+      action: PayloadAction<ChargingLocationStructure>,
+    ) => ({ ...currentState, location: action.payload }),
   },
 });
 
 export const {
-  actions: { loadMotorbikesLocations: loadMotorbikesActionCreator },
+  actions: {
+    loadMotorbikesLocations: loadMotorbikesActionCreator,
+    loadSelectedMotorbikeLocation: loadSelectedMotorbikeActionCreator,
+  },
   reducer: motorbikesLocationReducer,
 } = motorbikeSlice;
