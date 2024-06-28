@@ -4,7 +4,7 @@ interface ButtonProps {
   actionOnClick: () => void;
   type: "submit" | "button";
   text: string;
-  modifier: "button--hero" | "button--details";
+  modifier: "button--hero" | "button--details" | "button--closer";
   isDisabled: boolean;
 }
 

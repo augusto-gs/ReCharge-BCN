@@ -12,6 +12,7 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi/useMotorbikeLocationApi";
 import hasAvailableLocations from "../../utils/hasAvailableLocations";
 import useMapLocations from "../../hooks/useMapLocations/useMapLocations";
+import removeCarLocationChargers from "../../utils/removeCarLocationChargers";
 
 const MapDisplay = () => {
   const { getBikeLocations } = useMotorbikeLocationApi();
@@ -20,7 +21,11 @@ const MapDisplay = () => {
     (state) => state.motorbikesLocationState,
   );
 
-  const { hasMapLocations } = useMapLocations(hasAvailableLocations(locations));
+  const motorbikeLocations = removeCarLocationChargers(locations);
+
+  const { hasMapLocations } = useMapLocations(
+    hasAvailableLocations(motorbikeLocations),
+  );
 
   const dispatch = useAppDispatch();
 

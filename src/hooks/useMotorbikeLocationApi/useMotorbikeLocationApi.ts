@@ -1,5 +1,5 @@
 import axios from "axios";
-import ChargingLocationStructure from "../../types";
+import { ChargingLocationStructure } from "../../types";
 import { useCallback } from "react";
 import showToast from "../../utils/showToast";
 import { useAppDispatch } from "../../store/hooks";

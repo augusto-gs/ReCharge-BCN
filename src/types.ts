@@ -51,7 +51,7 @@ interface Port {
   reservable: boolean;
 }
 
-interface Station {
+export interface Station {
   id: string;
   label: string;
   coordinates: Coordinates;
@@ -59,7 +59,7 @@ interface Station {
   notes: string;
 }
 
-interface ChargingLocationStructure {
+export interface ChargingLocationStructure {
   id: string;
   network_brand_name: string;
   network_name: string;
@@ -74,5 +74,3 @@ interface ChargingLocationStructure {
   language_code: string;
   last_updated: string;
 }
-
-export default ChargingLocationStructure;
