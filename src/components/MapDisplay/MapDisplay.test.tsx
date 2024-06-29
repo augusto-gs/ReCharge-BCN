@@ -1,6 +1,7 @@
 import { screen } from "@testing-library/react";
 import { customRender } from "../../testUtils/testUtils";
 import MapDisplay from "./MapDisplay";
+import MapProviderWrapper from "../../store/features/map/MapProviderWrapper";
 
 const ResizeObserverMock = vi.fn(() => ({
   observe: vi.fn(),
@@ -15,7 +16,12 @@ describe("Given a MapDisplay component", () => {
     test("Then it should show a map", () => {
       const expectedTestID = "map";
 
-      customRender(<MapDisplay />, true);
+      customRender(
+        <MapProviderWrapper>
+          <MapDisplay />
+        </MapProviderWrapper>,
+        true,
+      );
 
       const map = screen.getByTestId(expectedTestID);
       expect(map).toBeInTheDocument();

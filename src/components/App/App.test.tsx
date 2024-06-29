@@ -3,6 +3,7 @@ import { customRender } from "../../testUtils/testUtils";
 import App from "./App";
 import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
+import MapProviderWrapper from "../../store/features/map/MapProviderWrapper";
 
 const ResizeObserverMock = vi.fn(() => ({
   observe: vi.fn(),
@@ -50,7 +51,12 @@ describe("Given an App component", () => {
       const buttonText = "Map";
       const expectedTestId = "map";
 
-      customRender(<App />, true);
+      customRender(
+        <MapProviderWrapper>
+          <App />
+        </MapProviderWrapper>,
+        true,
+      );
 
       const button = screen.getByRole("button", { name: buttonText });
 
@@ -68,7 +74,9 @@ describe("Given an App component", () => {
 
       customRender(
         <MemoryRouter initialEntries={["/map"]}>
-          <App />
+          <MapProviderWrapper>
+            <App />
+          </MapProviderWrapper>
         </MemoryRouter>,
       );
 
