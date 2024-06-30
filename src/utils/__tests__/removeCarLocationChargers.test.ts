@@ -6,7 +6,7 @@ describe("Given a removeCarLocationChargers function", () => {
     test("Then it should return the car location without chargers", () => {
       const motorbikeLocations = removeCarLocationChargers(locationsMock);
 
-      expect(motorbikeLocations[1].stations[0].ports.length).toBe(0);
+      expect(motorbikeLocations.length).toBe(1);
     });
   });
 });

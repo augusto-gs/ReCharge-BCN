@@ -1,71 +1,96 @@
 import "ol/ol.css";
-import { useEffect } from "react";
-import Map from "ol/Map";
-import View from "ol/View";
-import TileLayer from "ol/layer/Tile";
-import OSM from "ol/source/OSM";
-import { fromLonLat } from "ol/proj";
-import VectorSource from "ol/source/Vector";
-import Vector from "ol/layer/Vector";
+import { useContext, useEffect, useRef, useState } from "react";
 import MapDisplayStyled from "./MapDisplayStyled";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import useMotorbikeLocationApi from "../../hooks/useMotorbikeLocationApi/useMotorbikeLocationApi";
-import hasAvailableLocations from "../../utils/hasAvailableLocations";
-import useMapLocations from "../../hooks/useMapLocations/useMapLocations";
+import MapContext from "../../store/features/map/MapContext";
+import { useAppSelector } from "../../store/hooks";
+import Overlay from "ol/Overlay";
+import { Coordinate } from "ol/coordinate";
+import useMap from "../../hooks/useMap/useMap";
+import countNumberOfAvailableStations from "../../utils/countNumberOfAvailableStations";
+import { Station } from "../../types";
 import removeCarLocationChargers from "../../utils/removeCarLocationChargers";
 
 const MapDisplay = () => {
-  const { getBikeLocations } = useMotorbikeLocationApi();
+  const mapContainerRef = useRef<HTMLUListElement>(null);
 
-  const { locations } = useAppSelector(
+  const { map, source } = useContext(MapContext);
+
+  const { locations, location } = useAppSelector(
     (state) => state.motorbikesLocationState,
   );
 
+  const [isPopup, setIsPopup] = useState(false);
+  const [coordinates, setCoordinates] = useState<Coordinate | null>(null);
+
+  const { createFeatures, addListener } = useMap();
+
   const motorbikeLocations = removeCarLocationChargers(locations);
 
-  const { hasMapLocations } = useMapLocations(
-    hasAvailableLocations(motorbikeLocations),
-  );
+  source.addFeatures(createFeatures(motorbikeLocations));
 
-  const dispatch = useAppDispatch();
+  const closePopUp = () => {
+    const overlay = map.getOverlayById("popup");
+
+    if (overlay) {
+      overlay.setPosition(undefined);
+    }
+  };
+
+  const getNumberOfAvailableStations = (stations: Station[]) => {
+    const { totalPorts, availablePorts } =
+      countNumberOfAvailableStations(stations);
+
+    return `${availablePorts}/${totalPorts}`;
+  };
 
   useEffect(() => {
-    const source = new VectorSource({
-      wrapX: false,
+    map.setTarget("map");
+
+    const overlay = new Overlay({
+      autoPan: {
+        animation: {
+          duration: 250,
+        },
+      },
+      element: mapContainerRef.current!,
+      id: "popup",
     });
 
-    const vector = new Vector({
-      source: source,
-    });
+    map.addOverlay(overlay);
 
-    const tileLayer = new TileLayer({
-      source: new OSM({
-        wrapX: false,
-      }),
-    });
+    addListener(map, { setCoordinates, setIsPopup });
+  }, [addListener, map]);
 
-    const map = new Map({
-      target: "map",
-      layers: [tileLayer, vector],
-      view: new View({
-        center: fromLonLat([2.1734, 41.3851]),
-        zoom: 12,
-        maxZoom: 18,
-        minZoom: 8,
-      }),
-    });
+  useEffect(() => {
+    if (isPopup && coordinates && mapContainerRef.current) {
+      const overlay = map.getOverlayById("popup");
 
-    source.addFeatures(hasMapLocations());
-
-    return () => map.setTarget();
-  }, [hasMapLocations, dispatch, getBikeLocations, locations]);
+      if (overlay) {
+        overlay.setPosition(coordinates);
+      }
+    }
+  }, [isPopup, coordinates, map]);
 
   return (
-    <MapDisplayStyled
-      data-testid="map"
-      id="map"
-      tabIndex={0}
-    ></MapDisplayStyled>
+    <MapDisplayStyled data-testid="map" id="map" tabIndex={0}>
+      <ul id="popup" className="location-detail" ref={mapContainerRef}>
+        <li className="location-detail__address">
+          {isPopup ? location.address.address_string : null}
+        </li>
+        <li className="location-detail__stations">
+          Available chargers:{" "}
+          <span className="location-detail__available-stations">
+            {isPopup ? getNumberOfAvailableStations(location.stations) : null}
+          </span>
+        </li>
+        <button
+          onClick={closePopUp}
+          id="popup-closer"
+          className="location-detail__closer"
+        ></button>
+        <div id="popup-content"></div>
+      </ul>
+    </MapDisplayStyled>
   );
 };
 

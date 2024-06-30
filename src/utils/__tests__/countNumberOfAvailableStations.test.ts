@@ -10,7 +10,7 @@ describe("Given a countNumberOfAvailableStations function", () => {
         motorbikeLocations[0].stations,
       );
 
-      expect(numberOfAvailableStations[0]).toHaveProperty("availablePorts", 1);
+      expect(numberOfAvailableStations).toHaveProperty("availablePorts", 1);
     });
   });
 });

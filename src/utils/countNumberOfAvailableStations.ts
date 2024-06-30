@@ -1,28 +1,22 @@
 import { Station } from "../types";
 
-const countNumberOfAvailableStations = (stations: Station[]) => {
-  const stationsWithPorts = stations.filter(
-    (station) => station.ports.length > 0,
-  );
-
-  return stationsWithPorts.map((station) => {
-    const { totalPorts, availablePorts } = station.ports.reduce(
-      (accumulator, port) => {
+const countNumberOfAvailablePorts = (stations: Station[]) => {
+  const result = stations.reduce(
+    (accumulator, station) => {
+      station.ports.forEach((port) => {
         accumulator.totalPorts += 1;
 
         if (port.port_status[0].status === "AVAILABLE") {
           accumulator.availablePorts += 1;
         }
+      });
 
-        return accumulator;
-      },
-      { totalPorts: 0, availablePorts: 0 },
-    );
+      return accumulator;
+    },
+    { totalPorts: 0, availablePorts: 0 },
+  );
 
-    return {
-      totalPorts,
-      availablePorts,
-    };
-  });
+  return result;
 };
-export default countNumberOfAvailableStations;
+
+export default countNumberOfAvailablePorts;
