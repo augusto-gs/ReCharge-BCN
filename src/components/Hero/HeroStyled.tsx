@@ -3,8 +3,9 @@ import styled from "styled-components";
 const HeroStyled = styled.section`
   margin: 20px -20px;
   height: 300px;
-  background-image: url(https://i.postimg.cc/C5MgFFtj/bike-images.jpg);
+  background-image: url(https://i.postimg.cc/1tkBNcvp/bike-images.webp);
   background-size: cover;
+  height: 500px;
 
   .hero {
     &__layout {
@@ -32,8 +33,6 @@ const HeroStyled = styled.section`
   }
 
   @media (min-width: 480px) {
-    height: 500px;
-
     .hero {
       &__title {
         font-size: 50px;

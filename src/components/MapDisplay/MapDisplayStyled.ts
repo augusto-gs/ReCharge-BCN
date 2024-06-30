@@ -70,6 +70,13 @@ const MapDisplayStyled = styled.div`
       }
     }
   }
+  @media (min-width: 480px) {
+    .ol-zoom .ol-zoom-in,
+    .ol-zoom .ol-zoom-out {
+      width: 40px;
+      height: 40px;
+    }
+  }
 `;
 
 export default MapDisplayStyled;

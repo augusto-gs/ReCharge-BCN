@@ -18,6 +18,7 @@ const mainTheme: DefaultTheme = {
   },
   colors: {
     light: "#fff",
+    dark: "#000",
     tooltip: "#f2f2f2",
   },
 };

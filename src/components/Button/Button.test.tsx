@@ -1,13 +1,14 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import Button from "./Button";
 import userEvent from "@testing-library/user-event";
+import { customRender } from "../../testUtils/testUtils";
 
 describe("Given a Button component", () => {
   const text = "Map";
 
   describe("When it is rendered on screen and it receives a 'Map' text", () => {
     test("Then it should show a text 'Map' on a button on screen", () => {
-      render(
+      customRender(
         <Button
           actionOnClick={() => {}}
           type={"button"}
@@ -27,7 +28,7 @@ describe("Given a Button component", () => {
     test("Then it should call the received function one time", async () => {
       const mockAction = vi.fn();
 
-      render(
+      customRender(
         <Button
           actionOnClick={mockAction}
           type={"button"}
