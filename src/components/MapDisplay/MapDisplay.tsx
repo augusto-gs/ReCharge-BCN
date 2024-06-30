@@ -9,6 +9,8 @@ import useMap from "../../hooks/useMap/useMap";
 import countNumberOfAvailableStations from "../../utils/countNumberOfAvailableStations";
 import { Station } from "../../types";
 import removeCarLocationChargers from "../../utils/removeCarLocationChargers";
+import View from "ol/View";
+import { fromLonLat } from "ol/proj";
 
 const MapDisplay = () => {
   const mapContainerRef = useRef<HTMLUListElement>(null);
@@ -45,6 +47,19 @@ const MapDisplay = () => {
 
   useEffect(() => {
     map.setTarget("map");
+
+    const view: View = map.getView();
+
+    if (!view.getCenter()) {
+      map.setView(
+        new View({
+          center: fromLonLat([2.1734, 41.3851]),
+          zoom: 12,
+          maxZoom: 18,
+          minZoom: 8,
+        }),
+      );
+    }
 
     const overlay = new Overlay({
       autoPan: {

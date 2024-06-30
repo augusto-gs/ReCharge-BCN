@@ -28,12 +28,6 @@ const MapProviderWrapper = ({
 
     const map = new Map({
       layers: [tileLayer, vector],
-      view: new View({
-        center: fromLonLat([2.1734, 41.3851]),
-        zoom: 12,
-        maxZoom: 18,
-        minZoom: 8,
-      }),
     });
 
     return { map, vector, source };
