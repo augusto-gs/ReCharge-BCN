@@ -1,13 +1,14 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import LocationCard from "./LocationCard";
 import { locationMock } from "../../mocks/locationMock";
+import { customRender } from "../../testUtils/testUtils";
 
 describe("Given a LocationCard component", () => {
   describe("When it is rendered on screen", () => {
     test("Then it should show an 'Av. Reina Maria Cristina, 16' address", () => {
       const addressText = "Av. Reina Maria Cristina, 16";
 
-      render(<LocationCard location={locationMock} />);
+      customRender(<LocationCard location={locationMock} />, true);
 
       const address = screen.getByText(addressText);
 
@@ -16,9 +17,9 @@ describe("Given a LocationCard component", () => {
   });
 
   test("Then it should show a button with a 'Detail' text", () => {
-    const buttonText = "Details";
+    const buttonText = "See on map";
 
-    render(<LocationCard location={locationMock} />);
+    customRender(<LocationCard location={locationMock} />, true);
 
     const button = screen.getByRole("button", { name: buttonText });
 
