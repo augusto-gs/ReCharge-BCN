@@ -59,6 +59,11 @@ const MapDisplay = () => {
     map.addOverlay(overlay);
 
     addListener(map, { setCoordinates, setIsPopup });
+
+    return () => {
+      map.removeOverlay(overlay);
+      map.setTarget();
+    };
   }, [addListener, map]);
 
   useEffect(() => {
