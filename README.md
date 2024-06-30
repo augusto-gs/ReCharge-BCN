@@ -40,4 +40,4 @@ ReCharge BCN is a React project aimed at providing information on electric-motor
 
 ## Authors
 
-- [Augusto](https://github.com/your-github-username)
+- [Augusto Gomez Santos](https://github.com/augusto-gs)
