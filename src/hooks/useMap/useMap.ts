@@ -9,9 +9,13 @@ import { useAppDispatch } from "../../store/hooks";
 import Map from "ol/Map";
 import { loadSelectedMotorbikeActionCreator } from "../../store/features/motorbikes/motorbikeSlice";
 import { Coordinate } from "ol/coordinate";
+import View from "ol/View";
+import { useNavigate } from "react-router-dom";
 
 const useMap = () => {
   const dispatch = useAppDispatch();
+
+  const navigate = useNavigate();
 
   const createFeatures = (locations: ChargingLocationStructure[]) =>
     locations.map((location) => {
@@ -63,7 +67,26 @@ const useMap = () => {
     [dispatch],
   );
 
-  return { createFeatures, addListener };
+  const seeDetails = useCallback(
+    (location: ChargingLocationStructure, map: Map) => {
+      navigate("/map");
+
+      dispatch(loadSelectedMotorbikeActionCreator(location));
+
+      map.setView(
+        new View({
+          center: fromLonLat([
+            location.coordinates.longitude,
+            location.coordinates.latitude,
+          ]),
+          zoom: 15,
+        }),
+      );
+    },
+    [dispatch, navigate],
+  );
+
+  return { createFeatures, addListener, seeDetails };
 };
 
 export default useMap;
