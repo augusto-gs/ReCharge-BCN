@@ -18,7 +18,7 @@ const ButtonStyled = styled.button`
       width: 100px;
       height: 32px;
       font-weight: 400;
-      color: #64748b;
+      color: ${({ theme }) => theme.colors.dark};
       grid-column: 2 / 3;
       justify-self: center;
 

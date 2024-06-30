@@ -21,6 +21,7 @@ const NavigationStyled = styled.nav`
     .navigation-bar {
       &__container {
         gap: 50px;
+        font-size: 20px;
       }
     }
   }
