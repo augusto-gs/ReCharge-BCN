@@ -52,7 +52,7 @@ const useMap = () => {
 
             const pinOnMap = clickedFeature.getProperties().location;
 
-            dispatch(loadSelectedMotorbikeActionCreator(pinOnMap!));
+            dispatch(loadSelectedMotorbikeActionCreator(pinOnMap));
 
             settingFunctions.setCoordinates(coordinate);
             settingFunctions.setIsPopup(true);

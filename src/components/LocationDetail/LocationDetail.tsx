@@ -13,7 +13,7 @@ const LocationDetail = ({
     stations,
   },
 }: LocationDetailProps): React.ReactElement => {
-  const [{ availablePorts, totalPorts }] =
+  const { availablePorts, totalPorts } =
     countNumberOfAvailableStations(stations);
 
   return (

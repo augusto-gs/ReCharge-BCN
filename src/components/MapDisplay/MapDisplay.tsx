@@ -20,7 +20,7 @@ const MapDisplay = () => {
   );
 
   const [isPopup, setIsPopup] = useState(false);
-  const [overlayCoord, setCoordinates] = useState<Coordinate | null>(null);
+  const [coordinates, setCoordinates] = useState<Coordinate | null>(null);
 
   const { createFeatures, addListener } = useMap();
 
@@ -62,14 +62,14 @@ const MapDisplay = () => {
   }, [addListener, map]);
 
   useEffect(() => {
-    if (isPopup && overlayCoord && mapContainerRef.current) {
+    if (isPopup && coordinates && mapContainerRef.current) {
       const overlay = map.getOverlayById("popup");
 
       if (overlay) {
-        overlay.setPosition(overlayCoord);
+        overlay.setPosition(coordinates);
       }
     }
-  }, [isPopup, overlayCoord, map]);
+  }, [isPopup, coordinates, map]);
 
   return (
     <MapDisplayStyled data-testid="map" id="map" tabIndex={0}>
