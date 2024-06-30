@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import useMap from "../../hooks/useMap/useMap";
 import { ChargingLocationStructure } from "../../types";
 import capitalizeFirst from "../../utils/capitalizeFirst";
 import Button from "../Button/Button";
 import LocationCardStyled from "./LocationCardStyled";
+import MapContext from "../../store/features/map/MapContext";
 
 interface LocationCardProps {
   location: ChargingLocationStructure;
@@ -12,7 +15,11 @@ const LocationCard = ({
     address: { address_string },
     access_restriction,
   },
+  location,
 }: LocationCardProps): React.ReactElement => {
+  const { seeDetails } = useMap();
+  const { map } = useContext(MapContext);
+
   return (
     <LocationCardStyled className="location-card">
       <address className="location-card__address">
@@ -28,9 +35,11 @@ const LocationCard = ({
         {capitalizeFirst(access_restriction)}
       </span>
       <Button
-        actionOnClick={() => {}}
+        actionOnClick={() => {
+          seeDetails(location, map);
+        }}
         type={"button"}
-        text={"Details"}
+        text={"See on map"}
         modifier={"button--details"}
         isDisabled={false}
       />
