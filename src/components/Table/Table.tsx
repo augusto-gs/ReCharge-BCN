@@ -1,12 +1,14 @@
 import { useAppSelector } from "../../store/hooks";
+import { ChargingLocationStructure } from "../../types";
 import Loading from "../Loading/Loading";
 import LocationCard from "../LocationCard/LocationCard";
 import TableStyled from "./TableStyled";
 
-const Table = (): React.ReactElement => {
-  const { locations } = useAppSelector(
-    (state) => state.motorbikesLocationState,
-  );
+interface TableProps {
+  locations: ChargingLocationStructure[];
+}
+
+const Table = ({ locations }: TableProps): React.ReactElement => {
   const { isLoading } = useAppSelector((state) => state.uiState);
 
   return (
@@ -17,7 +19,7 @@ const Table = (): React.ReactElement => {
       </p>
       <ul className="table">
         {isLoading ? <Loading /> : null}
-        {locations.map((location) => (
+        {locations.map((location: ChargingLocationStructure) => (
           <li className="table__item" key={location.id}>
             {<LocationCard location={location} />}
           </li>
