@@ -2,9 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface UiStateStructure {
   isLoading: boolean;
+  isPopUp: boolean;
 }
 
-const initialState: UiStateStructure = { isLoading: false };
+const initialState: UiStateStructure = { isLoading: false, isPopUp: false };
 
 const uiSlice = createSlice({
   name: "uiState",
@@ -19,6 +20,16 @@ const uiSlice = createSlice({
       ...currentState,
       isLoading: false,
     }),
+
+    showPopUp: (currentState: UiStateStructure) => ({
+      ...currentState,
+      isPopUp: true,
+    }),
+
+    hidePopUp: (currentState: UiStateStructure) => ({
+      ...currentState,
+      isPopUp: false,
+    }),
   },
 });
 
@@ -26,6 +37,8 @@ export const {
   actions: {
     showLoading: showLoadingActionCreator,
     hideLoading: hideLoadingActionCreator,
+    showPopUp: showPopupActionCreator,
+    hidePopUp: hidePopupActionCreator,
   },
   reducer: uiReducer,
 } = uiSlice;
