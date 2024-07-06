@@ -24,6 +24,7 @@ const mockStore = configureStore({
     },
     uiState: {
       isLoading: false,
+      isPopUp: false,
     },
   },
 });

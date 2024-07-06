@@ -2,8 +2,7 @@ import "ol/ol.css";
 import { useContext, useEffect, useRef, useState } from "react";
 import MapDisplayStyled from "./MapDisplayStyled";
 import MapContext from "../../store/features/map/MapContext";
-import { useAppSelector } from "../../store/hooks";
-import Overlay from "ol/Overlay";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { Coordinate } from "ol/coordinate";
 import useMap from "../../hooks/useMap/useMap";
 import countNumberOfAvailableStations from "../../utils/countNumberOfAvailableStations";
@@ -11,6 +10,7 @@ import { Station } from "../../types";
 import removeCarLocationChargers from "../../utils/removeCarLocationChargers";
 import View from "ol/View";
 import { fromLonLat } from "ol/proj";
+import { hidePopupActionCreator } from "../../store/features/ui/uiSlice";
 
 const MapDisplay = () => {
   const mapContainerRef = useRef<HTMLUListElement>(null);
@@ -21,7 +21,9 @@ const MapDisplay = () => {
     (state) => state.motorbikesLocationState,
   );
 
-  const [isPopup, setIsPopup] = useState(false);
+  const dispatch = useAppDispatch();
+  const { isPopUp } = useAppSelector((state) => state.uiState);
+
   const [coordinates, setCoordinates] = useState<Coordinate | null>(null);
 
   const { createFeatures, addListener } = useMap();
@@ -36,6 +38,8 @@ const MapDisplay = () => {
     if (overlay) {
       overlay.setPosition(undefined);
     }
+
+    dispatch(hidePopupActionCreator());
   };
 
   const getNumberOfAvailableStations = (stations: Station[]) => {
@@ -61,46 +65,37 @@ const MapDisplay = () => {
       );
     }
 
-    const overlay = new Overlay({
-      autoPan: {
-        animation: {
-          duration: 250,
-        },
-      },
-      element: mapContainerRef.current!,
-      id: "popup",
-    });
+    const overlay = map.getOverlayById("popup")!;
 
-    map.addOverlay(overlay);
+    overlay.setElement(mapContainerRef.current!);
 
-    addListener(map, { setCoordinates, setIsPopup });
+    addListener(map, { setCoordinates });
 
     return () => {
-      map.removeOverlay(overlay);
       map.setTarget();
     };
   }, [addListener, map]);
 
   useEffect(() => {
-    if (isPopup && coordinates && mapContainerRef.current) {
+    if (isPopUp && coordinates && mapContainerRef.current) {
       const overlay = map.getOverlayById("popup");
 
       if (overlay) {
         overlay.setPosition(coordinates);
       }
     }
-  }, [isPopup, coordinates, map]);
+  }, [coordinates, isPopUp, map]);
 
   return (
     <MapDisplayStyled data-testid="map" id="map" tabIndex={0}>
       <ul id="popup" className="location-detail" ref={mapContainerRef}>
         <li className="location-detail__address">
-          {isPopup ? location.address.address_string : null}
+          {isPopUp ? location.address.address_string : null}
         </li>
         <li className="location-detail__stations">
           Available chargers:{" "}
           <span className="location-detail__available-stations">
-            {isPopup ? getNumberOfAvailableStations(location.stations) : null}
+            {isPopUp ? getNumberOfAvailableStations(location.stations) : null}
           </span>
         </li>
         <button

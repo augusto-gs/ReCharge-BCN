@@ -11,6 +11,7 @@ import { loadSelectedMotorbikeActionCreator } from "../../store/features/motorbi
 import { Coordinate } from "ol/coordinate";
 import View from "ol/View";
 import { useNavigate } from "react-router-dom";
+import { showPopupActionCreator } from "../../store/features/ui/uiSlice";
 
 const useMap = () => {
   const dispatch = useAppDispatch();
@@ -46,7 +47,6 @@ const useMap = () => {
       map: Map,
       settingFunctions: {
         setCoordinates: React.Dispatch<React.SetStateAction<Coordinate | null>>;
-        setIsPopup: React.Dispatch<React.SetStateAction<boolean>>;
       },
     ) => {
       map.on("click", (event) => {
@@ -59,7 +59,8 @@ const useMap = () => {
             dispatch(loadSelectedMotorbikeActionCreator(pinOnMap));
 
             settingFunctions.setCoordinates(coordinate);
-            settingFunctions.setIsPopup(true);
+
+            dispatch(showPopupActionCreator());
           }
         });
       });
@@ -82,10 +83,22 @@ const useMap = () => {
           zoom: 15,
         }),
       );
+
+      const overlay = map.getOverlayById("popup");
+
+      if (overlay) {
+        overlay.setPosition(
+          fromLonLat([
+            location.coordinates.longitude,
+            location.coordinates.latitude,
+          ]),
+        );
+
+        dispatch(showPopupActionCreator());
+      }
     },
     [dispatch, navigate],
   );
-
   return { createFeatures, addListener, seeDetails };
 };
 

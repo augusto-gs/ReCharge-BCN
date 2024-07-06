@@ -3,13 +3,14 @@ import {
   showLoadingActionCreator,
   uiReducer,
   UiStateStructure,
-} from "./uiSlice";
+} from "../uiSlice";
 
 describe("Given a uiReducer from a uiSlice", () => {
   describe("When it receives an initial state with a false and a showLoadingActionCreator", () => {
     test("Then it should return the new state with true", () => {
       const initialState: UiStateStructure = {
         isLoading: false,
+        isPopUp: false,
       };
 
       const actualUiState = uiReducer(initialState, showLoadingActionCreator());
@@ -22,6 +23,7 @@ describe("Given a uiReducer from a uiSlice", () => {
     test("Then it should return the new state with false", () => {
       const initialState: UiStateStructure = {
         isLoading: true,
+        isPopUp: false,
       };
 
       const actualUiState = uiReducer(initialState, hideLoadingActionCreator());
